@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.view.backgroundColor = .red
+        self.view.backgroundColor = .white
         
         view.addSubview(clearLimitButton)
         view.addSubview(setupButton)
@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         let swiftUIView = ScTimeAppPickerView()
         // 使用 UIHostingController 包装 SwiftUI 视图
         let hostingController = UIHostingController(rootView: swiftUIView)
+        hostingController.modalPresentationStyle = .fullScreen
         self.present(hostingController, animated: true)
     }
     

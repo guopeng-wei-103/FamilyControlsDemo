@@ -16,14 +16,6 @@ class ScreenTimeViewModel: ObservableObject {
             activitySelection = savedSelection
         }
     }
-    
-    func selectApps() {
-          let picker = FamilyActivityPicker(selection: activitySelection)
-          if let scene = UIApplication.shared.connectedScenes.first,
-             let windowScene = scene as? UIWindowScene {
-              windowScene.windows.first?.rootViewController?.present(picker, animated: true, completion: nil)
-          }
-      }
 
     // saves all the selections passed into activitySelection
     func saveSelection() {

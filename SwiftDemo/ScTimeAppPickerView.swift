@@ -10,46 +10,23 @@ import FamilyControls
 import ManagedSettings
 
 struct ScTimeAppPickerView: View {
-    @State private var showPicker = false
     @ObservedObject var model = MyModel()
-
+    
     var body: some View {
+        
         VStack {
+            Label("Activity", systemImage: "star.fill")
+                        .labelStyle(IconOnlyLabelStyle())
+                        .padding()
             
-            Spacer()
-
-            Button("选择应用") {
-                showPicker = true
-            }
-           .familyActivityPicker(isPresented: $showPicker, selection: $model.selectedActivity)
-
-            Spacer()
-
-        }
-        .onChange(of: model.selectedActivity) { oldValue, newValue in
-           MyModel.shared.onSelectedChange(newValue)
+            FamilyActivityPicker(
+                headerText: "选择活动类别",
+                footerText: "请根据家庭的需要选择活动",
+                selection: $model.selectedActivity
+            )
+            
         }
         
-        // Display selected applications
-        if !model.selectedActivity.applications.isEmpty {
-            VStack {
-                Text("选择的应用:\(model.selectedActivity.applications.count)个")
-            }
-        }
-        
-        // Display selected categories
-        if !model.selectedActivity.categories.isEmpty {
-            VStack {
-                Text("选择的分类:\(model.selectedActivity.categories.count)个")
-            }
-        }
-        
-        // Display selected web domains
-        if !model.selectedActivity.webDomains.isEmpty {
-            VStack {
-                Text("选择的网页域名:\(model.selectedActivity.webDomains.count)个")
-            }
-        }
     }
 }
 
@@ -67,9 +44,9 @@ class MyModel: ObservableObject {
         store.shield.applications = nil
         store.shield.applicationCategories = nil
     }
-
+    
     func onSelectedChange(_ value: FamilyActivitySelection) {
-
+        
         print("\n已限制应用: \(store.shield.applications?.count ?? 0)个")
         
         // 打印选择的应用信息
@@ -95,7 +72,7 @@ class MyModel: ObservableObject {
         if webDomains.count > 0 {
             print("\n选择的网页域名: \(webDomains.count)个")
         }
-               
+        
     }
     
 }
