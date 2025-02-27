@@ -30,6 +30,7 @@
 		E09F67CD2D6965F400AD17AF /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09F67CC2D6965F400AD17AF /* ManagedSettingsUI.framework */; };
 		E09F67D02D6965F400AD17AF /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F67CF2D6965F400AD17AF /* ShieldConfigurationExtension.swift */; };
 		E09F67D52D6965F400AD17AF /* MyShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E09F67C92D6965F400AD17AF /* MyShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E09F67DA2D6B1C7100AD17AF /* ScreenTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F67D92D6B1C7100AD17AF /* ScreenTimeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		E09F67CF2D6965F400AD17AF /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
 		E09F67D12D6965F400AD17AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E09F67D22D6965F400AD17AF /* MyShieldConfiguration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyShieldConfiguration.entitlements; sourceTree = "<group>"; };
+		E09F67D92D6B1C7100AD17AF /* ScreenTimeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTimeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				E063C8862D3F33420033473F /* ViewController.swift */,
 				E09F67862D695A9300AD17AF /* MyShieldConfigurationDataSource.swift */,
 				E09F67842D676C4000AD17AF /* ScTimeAppPickerView.swift */,
+				E09F67D92D6B1C7100AD17AF /* ScreenTimeViewModel.swift */,
 				E09F67812D65694D00AD17AF /* BluetoothManager.swift */,
 				E063C8882D3F33420033473F /* Main.storyboard */,
 				E063C88B2D3F33430033473F /* Assets.xcassets */,
@@ -510,6 +513,7 @@
 				E063C8832D3F33420033473F /* AppDelegate.swift in Sources */,
 				E09F67872D695A9300AD17AF /* MyShieldConfigurationDataSource.swift in Sources */,
 				E09F67822D65694D00AD17AF /* BluetoothManager.swift in Sources */,
+				E09F67DA2D6B1C7100AD17AF /* ScreenTimeViewModel.swift in Sources */,
 				E09F67852D676C4000AD17AF /* ScTimeAppPickerView.swift in Sources */,
 				E063C8852D3F33420033473F /* SceneDelegate.swift in Sources */,
 			);
