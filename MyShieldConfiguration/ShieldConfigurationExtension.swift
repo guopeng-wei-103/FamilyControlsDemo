@@ -15,19 +15,23 @@ import UIKit
 class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     override func configuration(shielding application: Application) -> ShieldConfiguration {
         // Customize the shield as needed for applications.
+        print("Shield application:\(application.localizedDisplayName ?? "")")
         return super.configuration(shielding: application)
     }
     
     override func configuration(shielding application: Application, in category: ActivityCategory) -> ShieldConfiguration {
+        print("Shield application:\(application.localizedDisplayName ?? "")")
         return super.configuration(shielding: application, in: category)
     }
     
     override func configuration(shielding webDomain: WebDomain) -> ShieldConfiguration {
         // Customize the shield as needed for web domains.
+        print("Shield webDomain:\(webDomain.domain ?? "")")
         return super.configuration(shielding: webDomain)
     }
     
     override func configuration(shielding webDomain: WebDomain, in category: ActivityCategory) -> ShieldConfiguration {
+        print("Shield webDomain:\(webDomain.domain ?? "")")
         return super.configuration(shielding: webDomain, in: category)
     }
 }

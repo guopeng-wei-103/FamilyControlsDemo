@@ -12,8 +12,8 @@ struct TotalActivityView: View {
     
     var body: some View {
         Text(totalActivity)
-        
         Text("You have reached the limit.")
+        Text("Try it later")
     }
 }
 

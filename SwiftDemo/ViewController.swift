@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func refreshInLoop() {
-        if let limitedApplications = MyModel.shared.store.shield.applications {
+        if let limitedApplications = ShieldModel.shared.store.shield.applications {
             countLabel.text = "已限制应用（或分组、域名）\(limitedApplications.count)个"
         } else {
             countLabel.text = "已限制应用（或分组、域名） 0 个"
@@ -65,16 +65,14 @@ class ViewController: UIViewController {
     
     
     @objc func beginSetup() {
-        // 创建包含 familyActivityPicker 的 SwiftUI 视图
         let swiftUIView = ScTimeAppPickerView()
-        // 使用 UIHostingController 包装 SwiftUI 视图
         let hostingController = UIHostingController(rootView: swiftUIView)
         hostingController.modalPresentationStyle = .fullScreen
         self.present(hostingController, animated: true)
     }
     
     @objc func clearAll() {
-        MyModel.shared.clearAllLimit()
+        ShieldModel.shared.clearAllLimit()
         countLabel.text = "已限制应用（或分组、域名）数量 0 个"
     }
 }

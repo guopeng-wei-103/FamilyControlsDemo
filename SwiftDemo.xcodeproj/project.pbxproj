@@ -18,7 +18,6 @@
 		E063C8A62D3F33430033473F /* SwiftDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E063C8A52D3F33430033473F /* SwiftDemoUITestsLaunchTests.swift */; };
 		E09F67822D65694D00AD17AF /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F67812D65694D00AD17AF /* BluetoothManager.swift */; };
 		E09F67852D676C4000AD17AF /* ScTimeAppPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F67842D676C4000AD17AF /* ScTimeAppPickerView.swift */; };
-		E09F67872D695A9300AD17AF /* MyShieldConfigurationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F67862D695A9300AD17AF /* MyShieldConfigurationDataSource.swift */; };
 		E09F67A42D69605F00AD17AF /* MYDeviceActivityReportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F67A32D69605F00AD17AF /* MYDeviceActivityReportExtension.swift */; };
 		E09F67A62D69605F00AD17AF /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F67A52D69605F00AD17AF /* TotalActivityReport.swift */; };
 		E09F67A82D69605F00AD17AF /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F67A72D69605F00AD17AF /* TotalActivityView.swift */; };
@@ -114,7 +113,6 @@
 		E09F67812D65694D00AD17AF /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		E09F67832D67652E00AD17AF /* SwiftDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDemo.entitlements; sourceTree = "<group>"; };
 		E09F67842D676C4000AD17AF /* ScTimeAppPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScTimeAppPickerView.swift; sourceTree = "<group>"; };
-		E09F67862D695A9300AD17AF /* MyShieldConfigurationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShieldConfigurationDataSource.swift; sourceTree = "<group>"; };
 		E09F67A12D69605F00AD17AF /* DeviceActivityReportExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = DeviceActivityReportExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09F67A32D69605F00AD17AF /* MYDeviceActivityReportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYDeviceActivityReportExtension.swift; sourceTree = "<group>"; };
 		E09F67A52D69605F00AD17AF /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				E063C8822D3F33420033473F /* AppDelegate.swift */,
 				E063C8842D3F33420033473F /* SceneDelegate.swift */,
 				E063C8862D3F33420033473F /* ViewController.swift */,
-				E09F67862D695A9300AD17AF /* MyShieldConfigurationDataSource.swift */,
 				E09F67842D676C4000AD17AF /* ScTimeAppPickerView.swift */,
 				E09F67D92D6B1C7100AD17AF /* ScreenTimeViewModel.swift */,
 				E09F67812D65694D00AD17AF /* BluetoothManager.swift */,
@@ -511,7 +508,6 @@
 			files = (
 				E063C8872D3F33420033473F /* ViewController.swift in Sources */,
 				E063C8832D3F33420033473F /* AppDelegate.swift in Sources */,
-				E09F67872D695A9300AD17AF /* MyShieldConfigurationDataSource.swift in Sources */,
 				E09F67822D65694D00AD17AF /* BluetoothManager.swift in Sources */,
 				E09F67DA2D6B1C7100AD17AF /* ScreenTimeViewModel.swift in Sources */,
 				E09F67852D676C4000AD17AF /* ScTimeAppPickerView.swift in Sources */,

@@ -37,12 +37,13 @@ class ScreenTimeViewModel: ObservableObject {
         }
     }
     
-    func endMonitoring(_ id: String) { // stops monitoring screentime for specific pod
+    func endMonitoring() { // stops monitoring screentime for specific pod
         let center = DeviceActivityCenter()
-        center.stopMonitoring([DeviceActivityName(id)])
+        center.stopMonitoring([DeviceActivityName("TimeApp2025")])
     }
     
-    func beginMonitoring(_ id: String) {
+    func beginMonitoring() {
+        let id = "TimeApp2025"
         let schedule = DeviceActivitySchedule(
             intervalStart: DateComponents(hour: 0, minute: 0, second: 0),
             intervalEnd: DateComponents(hour: 23, minute: 59, second: 59),
@@ -80,4 +81,56 @@ class ScreenTimeViewModel: ObservableObject {
         }
         
     }
+}
+
+
+
+class ShieldModel: ObservableObject {
+    static let shared: ShieldModel = {
+        let instance = ShieldModel()
+        instance.selectedActivity = FamilyActivitySelection()
+        instance.selectedActivity.applicationTokens = instance.store.shield.applications ?? Set<ApplicationToken>()
+        return instance
+    }()
+    var store = ManagedSettingsStore()
+    @Published var selectedActivity = FamilyActivitySelection()
+    
+    func clearAllLimit() {
+        store.shield.applications = nil
+        store.shield.applicationCategories = nil
+    }
+    
+    func onSelectedChange(_ value: FamilyActivitySelection) {
+        
+        print("\n已限制应用: \(store.shield.applications?.count ?? 0)个")
+        
+        // 打印选择的应用信息
+        let applications = value.applicationTokens
+        if applications.count > 0 {
+            print("\n选择的应用: \(applications.count)个")
+            store.shield.applications = applications
+        } else {
+            store.shield.applications = nil
+        }
+        
+        // 打印选择的应用分类信息
+        let categories = value.categoryTokens
+        if categories.count > 0 {
+            print("\n选择的分类: \(categories.count)个")
+            store.shield.applicationCategories = ShieldSettings.ActivityCategoryPolicy.specific(categories)
+        } else {
+            store.shield.applicationCategories = nil
+        }
+        
+        // 打印选择的网页域名信息
+        let webDomains = selectedActivity.webDomainTokens
+        if webDomains.count > 0 {
+            print("\n选择的网页域名: \(webDomains.count)个")
+            store.shield.webDomains = webDomains
+        } else {
+            store.shield.webDomains = nil
+        }
+        
+    }
+    
 }
